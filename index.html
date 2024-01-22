@@ -25,7 +25,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
             text-align: center;
         }
 
@@ -58,7 +58,11 @@
 
         .text-box {
             flex: 1;
+            align-items: center;
             padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Alinea verticalmente en el centro */
         }
 
         .image-container {
@@ -90,8 +94,10 @@
     </div>
     
     <div id="experience" class="section">
-        <div class="text-box">
+        <div class="headline">
             <h1>Mi Experiencia</h1>
+        </div>
+        <div class="text-box">
             <p>Aquí puedes conocer más sobre mi experiencia y habilidades.</p>
         </div>
         <div class="image-container">
@@ -101,8 +107,10 @@
     </div>
 
     <div id="about me" class="section">
-        <div class="text-box">
+        <div class="headline">
             <h1>About me</h1>
+        </div>
+        <div class="text-box">
             <p>¿Quieres saber mas sobre mi? ¡Contactame!</p>
             <p>Encuéntrame en GitHub: <a href="https://github.com/AdrianNiet" target="_blank">GitHub</a></p>
             <p>Conéctame en LinkedIn: <a href="https://www.linkedin.com/in/tu_usuario_linkedin" target="_blank">LinkedIn</a></p>
