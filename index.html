@@ -14,18 +14,14 @@
         .section {
             width: 100vw;
             height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center; /* Centra verticalmente todos los elementos */
-            align-items: center;
-            text-align: center;
+
         }
 
         .headline {
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: flex-start;
+            margin-top: 20px;
             text-align: center;
         }
 
@@ -37,6 +33,52 @@
             color: rgb(167, 167, 230);
             text-decoration: none;
         }
+
+        .text-box-container {
+            display: flex;
+            justify-content: space-between;
+            width: 40%; /* Puedes ajustar el ancho según sea necesario */
+            gap: 0px;
+            margin-top: 200px;
+            margin-left: 600px;
+        }
+
+        .text-box-intro1 {
+            width: 50%; /* Puedes ajustar el ancho según sea necesario */
+            border: 2px solid white; /* Añadir un borde blanco */
+            padding: 20px; /* Añadir relleno alrededor del contenido */
+            box-sizing: border-box; /* Incluye el borde y el relleno en el ancho total */
+            overflow: hidden;
+            word-wrap: break-word; /* Permite saltos de línea en palabras largas */
+            white-space: pre-line; /* Mantiene saltos de línea del texto original */
+        }
+
+        .text-box-intro2 {
+            width: 50%; /* Puedes ajustar el ancho según sea necesario */
+            border: 2px solid white; /* Añadir un borde blanco */
+            padding: 20px; /* Añadir relleno alrededor del contenido */
+            box-sizing: border-box; /* Incluye el borde y el relleno en el ancho total */
+            overflow: hidden;
+            word-wrap: break-word; /* Permite saltos de línea en palabras largas */
+            white-space: pre-line; /* Mantiene saltos de línea del texto original */
+        }
+
+        .text-box-intro2 p:first-child {
+            text-align: center; /* Aplica 'text-align: center' solo al primer párrafo */
+        }
+
+        .text-box-intro2 p:not(:first-child) {
+            text-align: justify; /* Aplica 'text-align: justify' a todos los párrafos excepto al primero */
+        }
+
+        .text-box-intro1 p:first-child {
+            text-align: center; /* Aplica 'text-align: center' solo al primer párrafo */
+        }
+
+        .text-box-intro1 p:not(:first-child) {
+            text-align: justify; /* Aplica 'text-align: justify' a todos los párrafos excepto al primero */
+        }
+
 
         #introduction {
             background-color: #333; /* Color de fondo diferente para la introducción */
@@ -50,41 +92,6 @@
             background-color: #777; /* Color de fondo diferente para la sección de contacto */
         }
 
-        .flex-container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .text-box {
-            flex: 1;
-            align-items: center;
-            padding: 0 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center; /* Alinea verticalmente en el centro */
-        }
-
-        .text-box-exp {
-            flex: 1;
-            align-items: flex-end;
-            padding: 0 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center; /* Alinea verticalmente en el centro */
-        }
-
-        .image-container {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            align-self: flex-start;
-        }
-
-        .image-container img {
-            max-width: 50%;
-            margin-bottom: 10px;
-        }
     </style>
 </head>
 <body>
@@ -93,9 +100,15 @@
         <div class="headline">
             <h1>Introducción</h1>
         </div>
-        <div class="text-box">
-            <p>Después de trabajar 2 años en telecomunicaciones, he querido reorientar mi carrera profesional con un Bootcamp en Data Science.</p>
-            <p>Busco un trabajo en el que aplicar mis conocimientos en programación y poder seguir creciendo de forma profesional.</p>
+        <div class="text-box-container">
+            <div class="text-box-intro1">
+                <p>Mi Background</p>
+                <p>Tras trabajar 2 años como operario para el ministerio de defensa, decidi reorientar mi carrera laboral con un bootcamp de Data Science en Python.</p>
+            </div>
+            <div class="text-box-intro2">
+                <p>Bootcamp</p>
+                <p>En el bootcamp adquiri multiples conocimientos de python y sus librerias correspondientes, también realice una serie de trabajos con el objetivo de poner en practica todos esos ejercicios.</p>
+            </div>
         </div>
         <div class="guide">
             <p>Puedes scrollear o usar el teclado para navegar: <a href="#contact">&#8595; Experiencia</a></p>
@@ -108,10 +121,6 @@
         </div>
         <div class="text-box-exp">
             <p>Aquí puedes conocer más sobre mi experiencia y habilidades.</p>
-        </div>
-        <div class="image-container">
-            <img src="a.jpg" alt="Imagen 1">
-            <img src="a.jpg" alt="Imagen 2">
         </div>
     </div>
 
@@ -129,6 +138,17 @@
 
 <script>
     document.addEventListener('keydown', function (event) {
+    handleNavigation(event);
+    });
+
+    
+    document.addEventListener('wheel', function (event) {
+        // Se obtiene la dirección de la rueda (positivo hacia abajo, negativo hacia arriba)
+        var scrollDirection = event.deltaY > 0 ? 'ArrowDown' : 'ArrowUp';
+        handleNavigation({ key: scrollDirection, preventDefault: function() {} });
+    });
+
+    function handleNavigation(event) {
         var currentSection = document.querySelector('.section.active');
         var nextSection;
 
@@ -147,7 +167,7 @@
                 nextSection.scrollIntoView({ behavior: 'smooth' });
             }
         }
-    });
+    }
 
     // Establece la primera sección como activa al cargar la página
     document.querySelector('.section').classList.add('active');
