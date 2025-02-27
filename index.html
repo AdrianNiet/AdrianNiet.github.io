@@ -1,177 +1,58 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <style>
-        body {
-            background-color: black;
-            color: white;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            overflow: hidden; /* Evita el desplazamiento horizontal */
-        }
-
-        .section {
-            width: 100vw;
-            height: 100vh;
-
-        }
-
-        .headline {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 20px;
-            text-align: center;
-        }
-
-        h1, p {
-            margin: 0;
-        }
-
-        a {
-            color: rgb(167, 167, 230);
-            text-decoration: none;
-        }
-
-        .text-box-container {
-            display: flex;
-            justify-content: space-between;
-            width: 40%; /* Puedes ajustar el ancho según sea necesario */
-            gap: 0px;
-            margin-top: 200px;
-            margin-left: 600px;
-        }
-
-        .text-box-intro1 {
-            width: 50%; /* Puedes ajustar el ancho según sea necesario */
-            border: 2px solid white; /* Añadir un borde blanco */
-            padding: 20px; /* Añadir relleno alrededor del contenido */
-            box-sizing: border-box; /* Incluye el borde y el relleno en el ancho total */
-            overflow: hidden;
-            word-wrap: break-word; /* Permite saltos de línea en palabras largas */
-            white-space: pre-line; /* Mantiene saltos de línea del texto original */
-        }
-
-        .text-box-intro2 {
-            width: 50%; /* Puedes ajustar el ancho según sea necesario */
-            border: 2px solid white; /* Añadir un borde blanco */
-            padding: 20px; /* Añadir relleno alrededor del contenido */
-            box-sizing: border-box; /* Incluye el borde y el relleno en el ancho total */
-            overflow: hidden;
-            word-wrap: break-word; /* Permite saltos de línea en palabras largas */
-            white-space: pre-line; /* Mantiene saltos de línea del texto original */
-        }
-
-        .text-box-intro2 p:first-child {
-            text-align: center; /* Aplica 'text-align: center' solo al primer párrafo */
-        }
-
-        .text-box-intro2 p:not(:first-child) {
-            text-align: justify; /* Aplica 'text-align: justify' a todos los párrafos excepto al primero */
-        }
-
-        .text-box-intro1 p:first-child {
-            text-align: center; /* Aplica 'text-align: center' solo al primer párrafo */
-        }
-
-        .text-box-intro1 p:not(:first-child) {
-            text-align: justify; /* Aplica 'text-align: justify' a todos los párrafos excepto al primero */
-        }
-
-
-        #introduction {
-            background-color: #333; /* Color de fondo diferente para la introducción */
-        }
-
-        #experience {
-            background-color: #555; /* Color de fondo diferente para la experiencia */
-        }
-
-        #contact {
-            background-color: #777; /* Color de fondo diferente para la sección de contacto */
-        }
-
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
-
-    <div id="introduction" class="section">
-        <div class="headline">
-            <h1>Introducción</h1>
-        </div>
-        <div class="text-box-container">
-            <div class="text-box-intro1">
-                <p>Mi Background</p>
-                <p>Tras trabajar 2 años como operario para el ministerio de defensa, decidi reorientar mi carrera laboral con un bootcamp de Data Science en Python.</p>
+    <main>
+        <section id="About_me">
+            <div class="intro">
+                <h1 class="name">Adrián Nieto Muñoz</h1>
+                <h2 class="Tittle">Data Scientist / Tecnico de Telecomunicaciones</h2>
+                <div class="intro-container">
+                <div class="foto">
+                    <img src="Foto.jpg" alt="Mi Foto">
+                </div>
+                <div class="info">
+                    <h3>Sobre mí</h3>
+                        <p>Despues de trabajar dos años como operario para el <span class="link-like">Ministerio de Defensa</span> decidi intentar reorientar mi carrera laboral con un <span class="link-like">Bootcamp en Data Science</span>, gracias a ello consegui trabajar 3 meses en una <span class="link-like">Consultora de Banca</span>.</p>
+                    </div>
+                </div>
             </div>
-            <div class="text-box-intro2">
-                <p>Bootcamp</p>
-                <p>En el bootcamp adquiri multiples conocimientos de python y sus librerias correspondientes, también realice una serie de trabajos con el objetivo de poner en practica todos esos ejercicios.</p>
+        </section>
+    </main>
+    <footer>
+        <h2>Contacto</h2>
+        <div class="Networks">
+            
+            <div class="Github">
+                <a href="https://github.com/" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+            <div class="LinkedIn">
+                <a href="https://www.linkedin.com/in/" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </div>
+            <div class="Correo">
+                <a href="#" onclick="copiarCorreo(event)">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+                <p id="mensaje" style="display: none; color: lightgreen; font-size: 14px; margin-top: 5px;">
+                    ¡Correo copiado!
+                </p>
             </div>
         </div>
-        <div class="guide">
-            <p>Puedes scrollear o usar el teclado para navegar: <a href="#contact">&#8595; Experiencia</a></p>
-        </div>
-    </div>
-    
-    <div id="experience" class="section">
-        <div class="headline">
-            <h1>Mi Experiencia</h1>
-        </div>
-        <div class="text-box-exp">
-            <p>Aquí puedes conocer más sobre mi experiencia y habilidades.</p>
-        </div>
-    </div>
-
-    <div id="about me" class="section">
-        <div class="headline">
-            <h1>About me</h1>
-        </div>
-        <div class="text-box">
-            <p>¿Quieres saber mas sobre mi? ¡Contactame!</p>
-            <p>Encuéntrame en GitHub: <a href="https://github.com/AdrianNiet" target="_blank">GitHub</a></p>
-            <p>Conéctame en LinkedIn: <a href="https://www.linkedin.com/in/adrian-nieto-munoz/" target="_blank">LinkedIn</a></p>
-        </div>
-    </div>
-
-
-<script>
-    document.addEventListener('keydown', function (event) {
-    handleNavigation(event);
-    });
-
-    
-    document.addEventListener('wheel', function (event) {
-        // Se obtiene la dirección de la rueda (positivo hacia abajo, negativo hacia arriba)
-        var scrollDirection = event.deltaY > 0 ? 'ArrowDown' : 'ArrowUp';
-        handleNavigation({ key: scrollDirection, preventDefault: function() {} });
-    });
-
-    function handleNavigation(event) {
-        var currentSection = document.querySelector('.section.active');
-        var nextSection;
-
-        if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
-            event.preventDefault(); // Evita el comportamiento predeterminado del desplazamiento de la página
-
-            if (event.key === 'ArrowDown') {
-                nextSection = currentSection.nextElementSibling;
-            } else {
-                nextSection = currentSection.previousElementSibling;
-            }
-
-            if (nextSection && nextSection.classList.contains('section')) {
-                currentSection.classList.remove('active');
-                nextSection.classList.add('active');
-                nextSection.scrollIntoView({ behavior: 'smooth' });
-            }
-        }
-    }
-
-    // Establece la primera sección como activa al cargar la página
-    document.querySelector('.section').classList.add('active');
-</script>
-
+    </footer>
+<script src="script.js"></script>
 </body>
 </html>
+
+
+    

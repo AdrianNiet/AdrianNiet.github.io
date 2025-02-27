@@ -1,0 +1,140 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #121212;
+    color: white;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1; /* Hace que el contenido principal ocupe el espacio disponible */
+}
+
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+
+header {
+    padding: 20px;
+    background-color: #1e1e1e;
+}
+
+section {
+    padding: 20px;
+}
+
+.project {
+    margin: 10px;
+    padding: 15px;
+    background: #333;
+    border-radius: 5px;
+}
+
+footer {
+    padding: 20px;
+    background-color: #1e1e1e;
+}
+
+.Networks {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.Networks a {
+    font-size: 30px; /* Tamaño del icono */
+    color: white; /* Color del icono */
+    text-decoration: none; /* Quitar subrayado */
+    transition: 0.3s;
+}
+
+.Networks a:hover {
+    color: #0077b5; /* Azul LinkedIn cuando pasas el mouse */
+}
+
+#Correo {
+    display: none;
+    visibility: visible;
+    opacity: 1;
+}
+
+.link-like {
+    color: blue; /* Color de enlace */
+    cursor: pointer; /* Hace que el cursor cambie a la manita */
+    text-decoration: underline; /* Subrayado como un enlace */
+}
+
+.link-like:hover {
+    color: darkblue; /* Cambia de color al pasar el mouse */
+}
+
+.intro {
+    opacity: 0; /* Inicia invisible */
+    transform: translateY(20px); /* Mueve la sección un poco hacia abajo */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.intro.show {
+    opacity: 1; /* Hace que aparezca */
+    transform: translateY(0); /* Vuelve a su posición normal */
+}
+
+.intro {
+    text-align: center;
+    padding: 20px;
+}
+
+.name {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.title {
+    font-size: 1.5rem;
+    color: gray;
+    margin-bottom: 20px;
+}
+
+.intro-container {
+    display: flex;
+    flex-direction: row; /* Asegura que los elementos estén en fila */
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.foto {
+    flex-shrink: 0; /* Evita que la imagen se reduzca */
+}
+
+.foto img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.info {
+    background: #000000;
+    padding: 15px;
+    border-radius: 10px;
+    max-width: 400px;
+    text-align: left; /* Asegura que el texto esté alineado correctamente */
+}
