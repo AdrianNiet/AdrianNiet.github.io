@@ -173,8 +173,38 @@ ol.aptitudes li {
 
 .contenedor {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     gap: 20px;
+}
+
+
+.contenedor2 {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos pasen a la siguiente línea */
+    gap: 20px;
+    justify-content: center; /* Asegura alineación en caso de elementos impares */
+}
+
+.contenedor2 > div {
+    width: 48%; /* Dos elementos por fila */
+    box-sizing: border-box;
+    padding: 20px;
+    background-size: 100% 100%;
+    background-position: center;
+    text-shadow: 
+        1px 1px 0 rgba(0, 0, 0, 2), 
+        -1px -1px 0 rgba(0, 0, 0, 2),  
+        1px -1px 0 rgba(0, 0, 0, 2),
+        -1px 1px 0 rgba(0, 0, 0, 2);
+}
+
+/* Asegura que si hay un número impar de elementos, el último se centra */
+.contenedor2 > div:nth-child(odd):last-child {
+    width: 100%; /* Ocupará toda la fila */
+    text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
 
@@ -197,6 +227,49 @@ ol.aptitudes li {
     width: 48%;
     box-sizing: border-box;
     background-image: url('Telefono.png');
+    background-size: 100% 100%;
+    background-position: center;
+    text-shadow: 
+    1px 1px 0 rgba(0, 0, 0, 2), 
+    -1px -1px 0 rgba(0, 0, 0, 2),  
+    1px -1px 0 rgba(0, 0, 0, 2),
+    -1px 1px 0 rgba(0, 0, 0, 2);
+    padding: 20px;
+}
+
+.bootinfo {
+    width: 48%;
+    box-sizing: border-box;
+    background-image: url('');
+    background-size: 100% 100%;
+    background-position: center;
+    text-shadow: 
+    1px 1px 0 rgba(0, 0, 0, 2), 
+    -1px -1px 0 rgba(0, 0, 0, 2),  
+    1px -1px 0 rgba(0, 0, 0, 2),
+    -1px 1px 0 rgba(0, 0, 0, 2);
+    padding: 20px; 
+}
+
+
+.materia {
+    width: 48%;
+    box-sizing: border-box;
+    background-image: url('');
+    background-size: 100% 100%;
+    background-position: center;
+    text-shadow: 
+    1px 1px 0 rgba(0, 0, 0, 2), 
+    -1px -1px 0 rgba(0, 0, 0, 2),  
+    1px -1px 0 rgba(0, 0, 0, 2),
+    -1px 1px 0 rgba(0, 0, 0, 2);
+    padding: 20px;
+}
+
+.analista, .argoz, .extra {
+    width: 40%;
+    box-sizing: border-box;
+    background-image: url('');
     background-size: 100% 100%;
     background-position: center;
     text-shadow: 
