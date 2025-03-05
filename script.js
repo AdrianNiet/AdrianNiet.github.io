@@ -1,19 +1,21 @@
 function copiarCorreo(event) {
-    event.preventDefault(); // Evita que el enlace recargue la página
+    // Evita que el enlace recargue la página
+    event.preventDefault(); 
 
-    // Texto del correo a copiar
+    //Aqui pon el texto a copiar
     const correo = "adriannieto1@hotmail.com";
 
-    // Copiar al portapapeles
+    //Esto copia al portapapeles
     navigator.clipboard.writeText(correo)
         .then(() => {
+            //Esto muestra el mensaje en la consola de F12
             console.log("Correo copiado:", correo);
 
-            // Mostrar mensaje
+            //
             const mensaje = document.getElementById("mensaje");
             mensaje.style.display = "block";
 
-            // Ocultar mensaje después de 2 segundos
+            //Ocultamos el mensaje despues de 2 segundos (2000 milisegundos)
             setTimeout(() => {
                 mensaje.style.display = "none";
             }, 2000);
@@ -23,4 +25,26 @@ function copiarCorreo(event) {
 
 document.addEventListener("DOMContentLoaded", function() {
     document.querySelector(".intro").classList.add("show");
+});
+
+document.querySelectorAll(".link-like").forEach(link => {
+    link.addEventListener("click", function() {
+        console.log("Funcion activada")
+        const targetId = this.getAttribute("data-target");
+        const targetSection = document.getElementById(targetId);
+
+        if (targetSection) {
+
+            // Ocultar todas las secciones
+            console.log("Secciones Ocultas.")
+            document.querySelectorAll(".seccion").forEach(sec => {
+
+                console.log("Elemento con clase 'activa':", sec);
+                sec.classList.remove("activa");
+            });
+
+            // Mostrar la sección correspondiente
+            targetSection.classList.add("activa");
+        }
+    });
 });

@@ -15,7 +15,7 @@ html, body {
 }
 
 main {
-    flex: 1; /* Hace que el contenido principal ocupe el espacio disponible */
+    flex: 1;
 }
 
 footer {
@@ -50,55 +50,74 @@ footer {
     background-color: #1e1e1e;
 }
 
-.Networks {
+.networks {
     display: flex;
     gap: 20px;
     justify-content: center;
     margin-top: 20px;
 }
 
-.Networks a {
-    font-size: 30px; /* Tamaño del icono */
-    color: white; /* Color del icono */
-    text-decoration: none; /* Quitar subrayado */
+.networks a {
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
     transition: 0.3s;
 }
 
-.Networks a:hover {
-    color: #0077b5; /* Azul LinkedIn cuando pasas el mouse */
+.networks a:hover {
+    color: #0077b5;
 }
 
-#Correo {
+#correo {
     display: none;
     visibility: visible;
     opacity: 1;
 }
 
+.seccion {
+    display: none;
+}
+
+.seccion.activa {
+    display: block;
+}
+
 .link-like {
-    color: blue; /* Color de enlace */
-    cursor: pointer; /* Hace que el cursor cambie a la manita */
-    text-decoration: underline; /* Subrayado como un enlace */
+    color: blue;
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 .link-like:hover {
-    color: darkblue; /* Cambia de color al pasar el mouse */
-}
-
-.intro {
-    opacity: 0; /* Inicia invisible */
-    transform: translateY(20px); /* Mueve la sección un poco hacia abajo */
-    transition: opacity 1s ease-out, transform 1s ease-out;
-}
-
-.intro.show {
-    opacity: 1; /* Hace que aparezca */
-    transform: translateY(0); /* Vuelve a su posición normal */
+    color: darkblue;
 }
 
 .intro {
     text-align: center;
     padding: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
 }
+
+.intro.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.defensa {
+    text-align: center;
+    padding: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.defensa.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 
 .name {
     font-size: 2.5rem;
@@ -113,7 +132,7 @@ footer {
 
 .intro-container {
     display: flex;
-    flex-direction: row; /* Asegura que los elementos estén en fila */
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 20px;
@@ -121,7 +140,7 @@ footer {
 }
 
 .foto {
-    flex-shrink: 0; /* Evita que la imagen se reduzca */
+    flex-shrink: 0;
 }
 
 .foto img {
@@ -136,5 +155,54 @@ footer {
     padding: 15px;
     border-radius: 10px;
     max-width: 400px;
-    text-align: left; /* Asegura que el texto esté alineado correctamente */
+    text-align: left;
+}
+
+ol.aptitudes {
+    list-style-type: disc;
+    margin-left: 20px;
+    padding-left: 10px;
+    width: fit-content;
+    text-align: left;
+}
+
+ol.aptitudes li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+
+.routers {
+    width: 48%;
+    box-sizing: border-box;
+    background-image: url('Routers.png');
+    background-size: 100% 100%;
+    background-position: center;
+    text-shadow: 
+    1px 1px 0 rgba(0, 0, 0, 2), 
+    -1px -1px 0 rgba(0, 0, 0, 2),  
+    1px -1px 0 rgba(0, 0, 0, 2),
+    -1px 1px 0 rgba(0, 0, 0, 2);
+    padding: 20px; 
+}
+
+
+.telefonia {
+    width: 48%;
+    box-sizing: border-box;
+    background-image: url('Telefono.png');
+    background-size: 100% 100%;
+    background-position: center;
+    text-shadow: 
+    1px 1px 0 rgba(0, 0, 0, 2), 
+    -1px -1px 0 rgba(0, 0, 0, 2),  
+    1px -1px 0 rgba(0, 0, 0, 2),
+    -1px 1px 0 rgba(0, 0, 0, 2);
+    padding: 20px;
 }

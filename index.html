@@ -10,37 +10,74 @@
 
 <body>
     <main>
-        <section id="About_me">
+        <section id="about_me" class="seccion activa">
             <div class="intro">
                 <h1 class="name">Adrián Nieto Muñoz</h1>
-                <h2 class="Tittle">Data Scientist / Tecnico de Telecomunicaciones</h2>
+                <h2 class="tittle">Data Scientist / Tecnico de Telecomunicaciones</h2>
                 <div class="intro-container">
                 <div class="foto">
                     <img src="Foto.jpg" alt="Mi Foto">
                 </div>
                 <div class="info">
                     <h3>Sobre mí</h3>
-                        <p>Despues de trabajar dos años como operario para el <span class="link-like">Ministerio de Defensa</span> decidi intentar reorientar mi carrera laboral con un <span class="link-like">Bootcamp en Data Science</span>, gracias a ello consegui trabajar 3 meses en una <span class="link-like">Consultora de Banca</span>.</p>
+                        <p>Despues de trabajar dos años como operario para el Ministerio de Defensa como <span class="link-like" data-target="tecnico">Tecnico de telecomunicaciones</span> decidi intentar reorientar mi carrera laboral con un <span class="link-like" data-target="bootcamp">Bootcamp en Data Science</span>, gracias a ello consegui trabajar 3 meses en una <span class="link-like" data-target="banca">Consultora de Banca</span>.</p>
+                        <p>Actualmente estoy en busqueda de un empleo que me permita adquirir nuevas <span class="link-like" data-target="habilidades">habilidades</span> en <span class="link-like" data-target="proyectos">proyectos</span> que sean muy interesantes y me permitan crecer de forma profesional.</p>
                     </div>
                 </div>
             </div>
         </section>
+
+        <section id="tecnico" class="seccion">
+            <h2>Técnico de telecomunicaciones</h2>
+            <p>Por lo que veo, quieres saber mas <span class="link-like" data-target="about_me">sobre mi</span></p>
+            <p>Mi experencia con Telecomunicaciones abarca tanto Telefonia como Routers Cisco.</p>
+            <div class="contenedor">
+                <div class="routers">
+                    <h3>Routers y Redes.</h3>
+                    <p>Para la parte de routers, tengo experencia con las siguientes tareas:</p>
+                    <ol class="aptitudes">
+                        <li>Revisión de enrutamiento, tanto Dinámico como Estático, comprobando que las rutas funcionan correctamente.</li>
+                        <li>Revisión de los puertos y sus direcciones IP.</li>
+                        <li>Revisión de conectividad correcta a la WAN y con los equipos locales mediante pruebas de Ping.</li>
+                        <li>Revisión de los túneles, que funcionen correctamente y reiniciarlos si hay algún inconveniente.</li>
+                        <li>Configuración completa del dispositivo en caso de sustitución.</li>
+                        <li>Instalación de certificados de seguridad.</li>
+                    </ol>
+                </div>
+                <div class="telefonia">
+                    <h3>Telefonia.</h3>
+                    <p>Para la parte de telefonia, tengo experencia con las siguientes tareas:</p>
+                    <ol class="aptitudes">
+                        <li>Revision de equipos individuales de telefonia, como Centralitas.</li>
+                        <li>Revisión de los puertos y estado de los enlaces.</li>
+                        <li>Cambios en las lineas de cliente y configuraciones.</li>
+                        <li>Gestion de revision por parte de tecnicos de campo en caso de averia y posterior revision para confirmar reparacion.</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <section id="bootcamp" class="seccion">
+            <h2>Mi Bootcamp</h2>
+            <p>Por lo que veo, quieres saber mas <span class="link-like" data-target="about_me">sobre mi</span></p>
+            <p>A finales de 2023 decidi reorientar mi carrera laboral con un Bootcamp en Data Science, donde adquiri muchas <span class="link-like" class="Habilidades">habilidades</span> en Python mediante la realización de gran cantidad de <span class="link-like" class="Proyectos">proyectos</span></p>
+        </section>
     </main>
     <footer>
         <h2>Contacto</h2>
-        <div class="Networks">
+        <div class="networks">
             
-            <div class="Github">
+            <div class="github">
                 <a href="https://github.com/" target="_blank">
                     <i class="fa-brands fa-github"></i>
                 </a>
             </div>
-            <div class="LinkedIn">
+            <div class="linkedIn">
                 <a href="https://www.linkedin.com/in/" target="_blank">
                     <i class="fa-brands fa-linkedin"></i>
                 </a>
             </div>
-            <div class="Correo">
+            <div class="correo">
                 <a href="#" onclick="copiarCorreo(event)">
                     <i class="fa-solid fa-envelope"></i>
                 </a>
